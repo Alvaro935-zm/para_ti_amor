@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Ti, Mi Amor</title>
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #e6e6fa, #d8bfd8);
+            color: #4b0082;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .hidden {
+            display: none;
+        }
+        .show-button {
+            text-align: center;
+            font-size: 2.2rem;
+            padding: 1.5rem 4rem;
+            background: linear-gradient(135deg, #ff007f, #ff1493);
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 50px;
+            font-weight: bold;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, background 0.5s ease;
+            letter-spacing: 2px;
+        }
+        .show-button:hover {
+            transform: scale(1.1);
+            background: linear-gradient(135deg, #ff1493, #ff007f);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+        .show-button:focus {
+            outline: none;
+        }
+        header {
+            background-color: #8a2be2;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 2s ease-out;
+            border-radius: 10px;
+        }
+        header h1 {
+            font-size: 3.5rem;
+            margin: 0;
+            animation: slideIn 1.5s ease-out;
+        }
+        header p {
+            font-size: 1.5rem;
+            font-weight: bold;
+            animation: fadeInText 2s ease-out;
+        }
+        main {
+            padding: 2rem;
+            text-align: center;
+            opacity: 0;
+            animation: fadeIn 3s forwards;
+            background-color: rgba(255, 255, 255, 0.7);
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        main h2 {
+            color: #6a0dad;
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+            animation: bounce 1s ease infinite;
+        }
+        main p {
+            font-size: 1.5rem;
+            line-height: 1.8;
+            color: #4b0082;
+        }
+        section {
+            margin-bottom: 2.5rem;
+            padding: 2rem;
+            border-radius: 12px;
+            background-color: rgba(238, 174, 255, 0.3);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            animation: fadeInSection 2s ease-out;
+        }
+        footer {
+            background-color: #8a2be2;
+            color: white;
+            text-align: center;
+            padding: 1.5rem 0;
+            font-size: 1rem;
+            animation: fadeIn 3s forwards;
+            border-radius: 10px;
+        }
+        .heart {
+            font-size: 3.5rem;
+            color: #ff1493;
+            margin: 1rem 0;
+            animation: blink 1s step-start infinite;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(0); }
+        }
+
+        @keyframes fadeInText {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        @keyframes fadeInSection {
+            0% { opacity: 0; transform: translateY(50px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            25%, 75% { opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+    <div id="button-container">
+        <button class="show-button" onclick="showPage()">Presióname</button>
+    </div>
+    <div id="content" class="hidden">
+        <header>
+            <h1>Para Ti, Mi Amor</h1>
+            <p>Un mensaje especial para la persona más importante en mi vida 💖</p>
+        </header>
+        <main>
+            <section>
+                <h2>Feliz san valentín </h2>
+                <p>
+                    Mi amor, luna de mi vida, mi reina hermosa. 🌙 Cada día que pasa, siento que mi amor por ti crece de manera infinita, como una estrella que nunca deja de brillar. Eres mi razón de ser, mi mayor alegría, 
+                    y el suspiro que me acompaña cada mañana al despertar. ❤️  
+                </p>
+                <div class="heart">💗💗💗</div>
+            </section>
+            <section>
+                <h2>Lo que Significas para Mí</h2>
+                <p>
+                    Eres mi sol en los días grises, mi refugio en los momentos difíciles y mi sueño hecho realidad.  
+                    No hay palabras suficientes para expresar cuánto te amo y lo agradecido que estoy de tenerte en mi vida. 🌹
+                    También quiero agradecerte profundamente por todo el apoyo que me has brindado en mis estudios y por todos los sacrificios que has hecho por nuestra pequeña familia. 
+                    Tu amor y esfuerzo no tienen precio, y siempre estaré agradecido por todo lo que haces por nosotros. ❤️
+                </p>
+            </section>
+        </main>
+        <footer>
+            <p>De tololo, Para Ti, Luna de mi vida. Siempre contigo. 💕</p>
+        </footer>
+    </div>
+
+    <script>
+        function showPage() {
+            document.getElementById("button-container").classList.add("hidden");
+            document.getElementById("content").classList.remove("hidden");
+        }
+    </script>
+</body>
+</html>
